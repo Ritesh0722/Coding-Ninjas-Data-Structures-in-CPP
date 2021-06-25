@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int i = 10;
+    int j = 20;
+
+    //pointer to a constant integer
+    int const * p = &i;             //this pointer can point to different integers but will give read-only access
+    p = &j;
+
+    //constant pointer to an integer
+    int * const p2 = &i;            //this pointer is constant and it can now only point to i
+    (*p2)++;
+    // p2 = &j;                     //this will give an error as p2 cannot point to any other variable
+
+    //const pointer to a constant integer
+    int const * const p3 = &i;
+    // (*p3)++;                        //error as this pointer is a constant and it is pointing to a constant integer
+    // p3 = &j;                        //error as this pointer is a constant and it is pointing to a constant integer
+}

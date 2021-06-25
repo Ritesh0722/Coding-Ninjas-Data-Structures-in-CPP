@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i = 2;
+    cout<<&i<<endl;
+    // cout<<&i<<endl;
+    i = 5;
+    // cout<<&i<<endl;
+
+    int * p = &i;
+
+    // p = &i;
+
+    cout<< &p << endl;
+    cout<< p << endl;
+    
+    *p = 6;
+
+    cout<< *p<< endl;
+    cout<< i;
+
+    cout<<"\nH" << sizeof(i);
+    cout<<"\nW" << sizeof(p);
+
+    return 0;
+}

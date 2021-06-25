@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int i = 10;
+    int * p = &i;
+    int ** pt = &p;
+    cout<< pt << endl;
+    cout<< &p << endl;
+
+    cout<< p << endl;
+    cout<< *pt << endl;
+    cout<< &i << endl;
+
+    cout<< i << endl;
+    cout<< *p << endl;
+    cout<< **pt << endl;
+}

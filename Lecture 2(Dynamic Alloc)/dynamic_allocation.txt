@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int *p = new int;
+    *p = 10;
+    cout<< *p <<endl;
+    *p = 20;
+    cout<< *p <<endl;
+
+    double *pd = new double;
+    *pd = 32.43;
+    cout<< *pd <<endl;
+
+    int n;
+    cin>> n;
+    int *arr = new int[n];
+    cout<< sizeof(*arr) << endl;
+    
+    for(int i = 0; i < n; i++){
+        cin>> arr[i];
+    }
+    for(int i = 0; i < n; i++){
+        cout<< arr[i] <<" ";
+    }
+
+    n = 10;
+    cout<<endl;
+    for(int i = 0; i < n; i++){
+        cout<< arr[i] <<" ";
+    }
+
+    delete p;
+    delete pd;
+    delete []arr;
+    cout<<endl;
+    for(int i = 0; i < n; i++){
+        cout<< arr[i] <<" ";
+    }
+}

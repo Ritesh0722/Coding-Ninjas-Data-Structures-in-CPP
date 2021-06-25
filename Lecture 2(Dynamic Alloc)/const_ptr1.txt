@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void g(int const & a) {
+    // a++;    //not possible as it is passed as a constant reference to this function
+}
+
+void f(const int * p) {
+    // (*p)++;    //not possible as the pointer can only be used for reading
+}
+
+int main() {
+    int const i = 10;
+
+    int const * p = &i;
+
+    int j = 12;
+    int* p3 = &j;
+    f(p3);
+    g(j);
+
+    int const * p2 = &j;
+    cout << *p2 << endl;
+    j++;
+    cout << *p2 << endl;
+}
